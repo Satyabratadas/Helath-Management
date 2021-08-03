@@ -9,12 +9,12 @@ while(user == "yes"):
             x = int(input("choose 1 for food 2 for excersize \n"))
             if(x==1):
                 value=input("type here\n")
-                with open("Sayak_food.txt","a") as p:
+                with open("Your_food.txt","a") as p:
                     p.write(str([str(getdate())]) + ": "+value+"\n")
                     print("successfully written")
             elif(x==2):
                 value = input('text here: \n')
-                with open('Sayak_excersize.txt',"a") as p:
+                with open('Your_excersize.txt',"a") as p:
                     p.write(str([str(getdate())])+": " +value+"\n")
                     print("add successful")
         
@@ -56,6 +56,19 @@ while(user == "yes"):
                 with open('Rambo_excersize.txt',"a") as p:
                     p.write(str([str(getdate())])+": " +value+"\n")
                     print("add successful")
+        
+        elif(t==5):
+            x = int(input("choose 1 for food 2 for excersize \n"))
+            if(x==1):
+                value=input("type here\n")
+                with open("Sayak_food.txt","a") as p:
+                    p.write(str([str(getdate())]) + ": "+value+"\n")
+                    print("successfully written")
+            elif(x==2):
+                value = input('text here: \n')
+                with open('Sayak_excersize.txt',"a") as p:
+                    p.write(str([str(getdate())])+": " +value+"\n")
+                    print("add successful")
                     
         else:
             print("Enter the valid input (1(Sayak)) (2(Saswata)) (3(Soubhik)) (4(Rambo)): ")
@@ -64,11 +77,11 @@ while(user == "yes"):
         if(t==1):
             x = int(input("choose 1 for food 2 for excersize \n"))
             if(x==1):
-                with open('Sayak_food.txt') as p:
+                with open('Your_food.txt') as p:
                     for i in p:
                         print(i,end="")
             elif(x==2):
-                with open('Sayak_excersize.txt') as p:
+                with open('Your_excersize.txt') as p:
                     for i in p:
                         print(i,end="")
         
@@ -104,6 +117,17 @@ while(user == "yes"):
                 with open('Rambo_excersize.txt') as p:
                     for i in p:
                         print(i,end="")
+
+        elif(t==5):
+            x = int(input("choose 1 for food 2 for excersize \n"))
+            if(x==1):
+                with open('Sayak_food.txt') as p:
+                    for i in p:
+                        print(i,end="")
+            elif(x==2):
+                with open('Sayak_excersize.txt') as p:
+                    for i in p:
+                        print(i,end="")                
         
         else:
             print("enter valid input (Sayak,Saswata,Soubhik,Rambo): ")
@@ -112,9 +136,9 @@ while(user == "yes"):
         print("Health Management System")
         a = int(input("Choose 1 for log the data and 2 for retrive the data: "))
         if(a==1):
-            b = int(input("1 for Sayak 2 for Saswata 3 for Soubhik 4 for Rambo: "))  # add more user if you wnat as your wish then take part will increase like t==1,2,3..n and retrive part also increase
+            b = int(input("1 for You 2 for saswata 3 for Soubhik 4 for Rambo 5 for Sayak: "))  # add more user if you wnat as your wish then take part will increase like t==1,2,3..n and retrive part also increase
             take(b)
         else:
-            b = int(input("1 for Sayak 2 for Saswata 3 for Soubhik 4 for Rambo: "))
+            b = int(input("1 for You 2 for Saswata 3 for Soubhik 4 for Rambo 5 for Sayak: "))
             retrive(b)
     user = input("enter yes to continue:  ")
